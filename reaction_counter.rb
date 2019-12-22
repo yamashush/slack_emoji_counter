@@ -1,11 +1,12 @@
 require 'json'
+require "each_with_anim" # progress bar gem
 
 DIR = './slack_export_data'
 
 counter_hash = Hash.new
 
 # only channel sub-directories yyyy-mm-dd.json file
-Dir.glob("#{DIR}/*/*.json") do |file|
+Dir.glob("#{DIR}/*/*.json").each_with_animation do |file|
 
   # only messages include reaction
   reactions = JSON.load(File.open(file)).select { |msg| msg['reactions'] }

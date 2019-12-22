@@ -1,12 +1,14 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    each_with_anim (0.1.4)
     json (2.3.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  each_with_anim
   json
 
 BUNDLED WITH
